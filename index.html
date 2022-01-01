@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Stats</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="app/script/script.js"></script>
+    <script src="app/script/endpoints.js"></script>
+    
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="body-wrapper">
+            <div class="header">
+                <img src="./images/covid.png" height="50px" width="50px" alt="covid-19">
+                <h1 class="title">Covid Stats</h1>
+            </div>
+            <div class="content-wrapper">
+                <div class="flex">
+                    <div class="selection">
+                        <select onchange="selectContinent(event)">
+                        </select>
+                    </div>
+                    <div class="filter flex hidden">
+                        <input type="text" placeholder="Cerca">
+                        <img src="images/search.png" height="20px" width="20px" alt="search" onclick="searchCountry(event)"> 
+                    </div>
+                </div>
+                <ul class="countries-list">
+                    <!--<li class="country">
+                        <h3 class="name">Italy</h3>
+                        <div class="stats-body flex flex-between">
+                            <div class="cases">
+                                <h3>CASI</h3>
+                                <p>Nuovi: </p>
+                                <p>Ricoverati: </p>
+                                <p>Totale:</p>
+                            </div>
+                            <div class="deaths">
+                                <h3>MORTI</h3>
+                                <p>Nuovi: </p>
+                                <p>Totale: </p>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

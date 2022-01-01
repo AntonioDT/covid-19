@@ -1,0 +1,106 @@
+@import "global";
+@import "animations";
+
+.body-wrapper {
+    padding: 20px;
+}
+
+.header {
+    position: relative;
+    img {
+        position: absolute;
+        z-index: -1;
+        animation-name: covid;
+        animation-timing-function: ease-in;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.title {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content-wrapper {
+    padding: 30px 0;
+    .selection {
+        padding: 0 10px 20px 0;
+        select {
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            height: 30px;
+            width: 150px;
+            border: none;
+            border-radius: 2px;
+            padding: 4px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .filter {
+        padding-bottom: 20px;
+        align-items: center;
+        input {
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            height: 30px;
+            width: 150px;
+            border: none;
+            border-radius: 2px;
+            padding: 4px 30px 4px 4px;
+            &:focus {
+                outline: none;
+            }
+        }
+        img {
+            border: none;
+            background-color: transparent;
+            position: relative;
+            right: 23px;
+        }
+    }
+    .countries-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .country {
+        background-color: white;
+        box-shadow: 0px 5px 5px rgb(95, 95, 95);
+        border-radius: 5px;
+        width: 300px;
+        padding: 15px;
+        .day {
+            padding-bottom: 5px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .name {
+            font-weight: bold;
+            padding-bottom: 5px;
+        }
+        .stats-body {
+            font-size: 16px;
+            h3 {
+                color: #4a4a4a;
+                padding-bottom: 10px;
+                font-size: 16px;
+            }
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
