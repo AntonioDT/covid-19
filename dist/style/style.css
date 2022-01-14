@@ -121,7 +121,7 @@ p {
 }
 
 .content-wrapper .selection {
-  padding: 0 10px 20px 0;
+  padding: 0 20px 10px 0;
 }
 
 .content-wrapper .selection select {
@@ -143,6 +143,15 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.content-wrapper .filter button {
+  border-radius: 4px;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 30px;
+  width: 80px;
+  background-color: white;
 }
 
 .content-wrapper .filter input {

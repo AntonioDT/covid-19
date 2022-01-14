@@ -27,7 +27,7 @@
 .content-wrapper {
     padding: 30px 0;
     .selection {
-        padding: 0 10px 20px 0;
+        padding: 0 20px 10px 0;
         select {
             font-family: 'Raleway', sans-serif;
             font-size: 14px;
@@ -44,6 +44,14 @@
     .filter {
         padding-bottom: 20px;
         align-items: center;
+        button {
+            border-radius: 4px;
+            border: none;
+            border: 1px solid rgba(0,0,0,0.5);
+            height: 30px;
+            width: 80px;
+            background-color: white;
+        }
         input {
             font-family: 'Raleway', sans-serif;
             font-size: 14px;

@@ -18,7 +18,6 @@ async function getStats() {
         COVID_DATA = parseResponse(response);
         console.log(COVID_DATA);
         buildSelection();
-        //buildList(list);
     })
     .catch(err => {
         console.error(err);
@@ -62,7 +61,6 @@ function createContinent(data, item) {
 }
 
 function selectContinent(e) {
-    console.log(e.target.value);
     let defaultOption = $("#default");
     defaultOption.remove();
     let continentSelected = e.target.value;
@@ -96,11 +94,11 @@ function buildList(continent) {
     LIST.empty();
     COVID_DATA.forEach(element => {
         if (element.name === continent) {
+            element.countries = sortByCountryName(element.countries);
             element.countries.forEach(country => {
                 if (country.country !== continent) {
                     buildElement(country);
                 }
-                
             });
         }
     });
@@ -161,4 +159,17 @@ function buildElement(country) {
     li.appendChild(divStats);
     LIST.append(li);
 }
+
+function sortByCountryName(countries) {
+    countries.sort(function(countryA, countryB){
+        let nameA = countryA.country.toUpperCase();
+        let nameB = countryB.country.toUpperCase();
+        if (nameA <= nameB) {
+            return -1;
+        } else
+            return 1;
+    });
+    return countries;
+}
+
 
